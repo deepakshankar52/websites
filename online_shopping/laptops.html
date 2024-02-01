@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Online Shopping: Laptops</title>
+    <style>
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    overflow: hidden;
+    background-color: black;
+    padding: 20px;
+}
+
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 15px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header a.sign_in {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.header-right {
+    float: right;
+}
+
+/* search box start */
+.header .search-container {
+  float: right;
+}
+
+.header input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.header .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #a63636;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.header .search-container button:hover {
+  background: #ccc;
+}
+/* search box end */
+
+.topnav {
+    overflow: hidden;
+    background-color: #232f3e;
+    display: flex;
+    height: 50px;
+
+}
+
+.topnav a {
+    float: left;
+    display: inline;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    margin:0 auto; /* this will center the page */
+    width: 1500px;  /*  use your width here */
+    height: 1000px;
+}
+
+.below_nav {
+    width: 1500px;
+    height: 50px;
+    background-color: whitesmoke;
+    padding: 15px;      
+}
+
+.container .sidenav {
+  width: 250px;
+  height: 950px;
+  z-index: 1;
+  float: left;
+  background: white;
+  overflow-x: hidden;
+  padding: 8px 0;
+  font-size: 15px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: grey;
+}
+
+.container .pop_up {
+    display: flex;
+    width: 1250px;
+    float: right;
+    position: relative;
+    height: 200px;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.pop_up img {
+    width: 140px; 
+    height: 80px;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    margin: 0 10px
+}
+
+.pop_up img:hover{
+    width:200px;
+    height: 150px;
+} 
+
+.pop_up .image {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.container .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0px;
+    margin-top: 250px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    object-fit: cover;
+}
+
+.grid-item:hover {
+    background-color: lightgray;
+}
+
+
+img {
+    width: 300px;
+    height: 200px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: whitesmoke;
+    color: black;
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    /* search box start */
+    .header .search-container {               
+        float: none;
+    }
+
+    .header a, .header input[type=text], .header .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .header input[type=text] {
+        border: 1px solid #ccc;  
+    }
+    /* search box end */
+
+    .sidenav {padding-top: 15px;}
+
+
+    
+}
+    </style>
+</head>
+
+<body>
+    
+<div class="header">
+    <a href="index.html" class="logo">SD Online Shopping</a>
+    <div class="header-right">
+        <a class="sign_in" href="sign_in.html">Sign in</a>
+        <a href="#">Orders</a>
+        <a href="#">Cart</a>
+    </div>
+    <div class="search-container">
+        <form action="#">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="topnav">
+    <a href="#all">All</a>
+    <a href="#sell">Sell</a>
+    <a href="#best_sellers">Best Sellers</a>
+    <a href="#mobiles">Mobiles</a>
+    <a href="#Todays_deals">Today's Deals</a>
+    <a href="#couster_service">Customer Service</a>
+    <a href="#new_releases">New Releases</a>
+    <a href="#electronics">Electronics</a>
+    <a href="#home_n_kitchen">Home & Kitchen</a>
+</div>
+
+<div class="container">
+    <div class="below_nav">
+        Showing results for "laptops"...
+    </div>
+    <div class="sidenav">
+        <b>Delivery Day</b>
+        <form>
+            <input type="checkbox" id="tomorrow" name="delivery_day" value="tomorrow">
+            <label for="tomorrow">Get It by Tomorrow</label><br>
+            <input type="checkbox" id="2_days" name="delivery_day" value="2_days">
+            <label for="2_days">Get It in 2 Days</label><br>  
+        </form><br>
+        <b>Customer Review</b>
+        <a href="#"> 4 Star & above</a>
+        <a href="#"> 3 Star & above</a>
+        <a href="#"> 2 Star & above</a>
+        <a href="#"> 1 Star & above</a>
+        <br>
+        <b>Brand</b>
+        <form>
+            <input type="checkbox" id="hp" name="brand" value="hp">
+            <label for="hp">HP</label><br>
+            <input type="checkbox" id="dell" name="brand" value="dell">
+            <label for="dell">Dell</label><br> 
+            <input type="checkbox" id="lenovo" name="brand" value="lenovo">
+            <label for="lenovo">Lenovo</label><br> 
+            <input type="checkbox" id="asus" name="brand" value="asus">
+            <label for="asus">ASUS</label><br> 
+            <input type="checkbox" id="acer" name="brand" value="acer">
+            <label for="acer">Acer</label><br> 
+            <input type="checkbox" id="msi" name="brand" value="msi">
+            <label for="msi">MSI</label><br> 
+            <input type="checkbox" id="microsoft" name="brand" value="microsoft">
+            <label for="microsoft">Microsoft</label><br>  
+            <input type="checkbox" id="xiaomi" name="brand" value="xiaomi">
+            <label for="xiaomi">Xiaomi</label><br> 
+        </form><br>
+        <b>Price Desktops</b>
+        <a href="#">Under ₹20,000</a>
+        <a href="#">₹20,000 - ₹30,000</a>
+        <a href="#">₹30,000 - ₹40,000</a>
+        <a href="#">₹40,000 - ₹50,000</a>
+        <a href="#">Over ₹50,000</a>
+        <br>
+        <b>Deals & Discounts</b>
+        <a href="#">All Discounts</a>
+        <a href="#">Today's Deals</a>
+        <br>
+        <b>Laptop CPU Manufacturer</b>
+        <form>
+            <input type="checkbox" id="amd" name="cpu_manufacturer" value="amd">
+            <label for="amd">AMD</label><br>
+            <input type="checkbox" id="apple" name="cpu_manufacturer" value="apple">
+            <label for="apple">Apple</label><br>
+            <input type="checkbox" id="intel" name="cpu_manufacturer" value="intel">
+            <label for="intel">Intel</label><br>
+            <input type="checkbox" id="nvidia" name="cpu_manufacturer" value="nvidia">
+            <label for="nvidia">NVIDIA</label><br>
+            <input type="checkbox" id="qualcomm" name="cpu_manufacturer" value="qualcomm">
+            <label for="qualcomm">Qualcomm</label><br>
+            <input type="checkbox" id="via" name="cpu_manufacturer" value="via">
+            <label for="via">VIA</label><br>
+        </form>
+    </div>
+    <div class="pop_up">
+        <div class="image">
+            <a href="#" target="_self"> 
+                <img src="templates\laptops.png" alt="laptops">
+            </a>
+            <p>HP Laptop</p>
+        </div>
+        <div class="image">
+            <a href="#" target="_self"> 
+                <img src="templates\inspiron_5620.png" alt="laptops">
+            </a>
+            <p>Dell Inspiron</p>
+        </div>
+        <div class="image">
+            <a href="#" target="_self"> 
+                <img src="templates\hp_15s_fq5111TU.png" alt="laptops">
+            </a>
+            <p>HP Laptop</p>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <p>Dell Latitude 14 3240<p>
+            <a href="#" target="_self"><img src="templates\latitude_14_3240.png" alt="laptops"></a>
+        </div>
+        <div class="grid-item">
+            <p>Dell Inspiron 5620<p>
+            <a href="#" target="_self"><img src="templates\inspiron_5620.png" alt="laptops"></a>
+        </div>
+        <div class="grid-item">
+            <p>G16 Gaming Laptop Dell<p>
+            <a href="#" target="_self"><img src="templates\G16_gaming.png" alt="laptops"></a>
+        </div>
+        <div class="grid-item">
+            <p>HP 15s-fq5111TU<p>
+            <a href="#" target="_self"><img src="templates\hp_15s_fq5111TU.png" alt="laptops"></a>
+        </div>
+        <div class="grid-item">
+            <p>G16 Gaming Laptop Dell<p>
+            <a href="#" target="_self"><img src="templates\G16_gaming.png" alt="laptops"></a>
+        </div>
+        <div class="grid-item">
+            <p>HP 15s-fq5111TU<p>
+            <a href="#" target="_self"><img src="templates\hp_15s_fq5111TU.png" alt="laptops"></a>
+        </div>
+    </div>
+
+
+</div>
+
+<br><br>
+<footer>
+    <p>
+        <a href="#">Coditions of Use</a>&nbsp; &nbsp;    
+        <a href="#">Privacy Notice</a>&nbsp; &nbsp; 
+        <a href="#">Help</a>
+        <br>
+        @2023, SD-Online-Shopping.com, Inc. or its affiliates
+    </p>
+</footer>
+
+</body>
+</html>
+
+
+<!--
+queries:
+sidenav: (with removed position: fixed on .sidenav) https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed2 
+-->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time"></div>
+    <button onclick="pick(timer())">Pick</button>
+    <ul><div id="dis"></div></ul>
+
+    <script>
+        var time = document.getElementById("time");
+        var min = 0;
+        var sec = 0;
+        function timer() {
+            sec += 1;
+            if(sec == 60) {
+                min += 1;
+                sec = 0;
+            }
+            var val = min + ":" + sec;
+            time.innerHTML = val;
+            return val;
+        }
+        var d = document.getElementById("dis");
+        function pick(val) {
+            d.innerHTML = "";
+            d.innerHTML = `<p>${val}</p>`;            
+        }
+        
+        setInterval(timer, 1000);
+    </script>
+</body>
+</html>

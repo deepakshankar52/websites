@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Tasks:</label>
+    <input type="text" id="task" placeholder="Enter the tasks" />
+    <button onclick="update()">Update</button>
+    <button onclick="display()">Display</button>
+    <uL><div id="dis"></div></ul>
+    <script>
+        let task_list = [];
+        function update() {
+            var user_tasks = document.getElementById("task").value;
+            task_list.push(user_tasks);
+            console.log(task_list);
+        }
+        var task_space = document.getElementById("dis");
+        function display() {
+            let task_printed = "";
+            for(let i=0; i<task_list.length; i++) {
+                task_printed += `<li>${task_list[i]}</li>`;
+            }
+            task_space.innerHTML = task_printed;
+        }
+    </script>
+</body>
+</html>

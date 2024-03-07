@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quiz Timer</h1>
+    <form action="next.html" >
+        <label >1. What is the capital of India?</label><br>
+        <input type="radio" value="Chennai" name="capital"> Chennai
+        <input type="radio" id="New_Delhi" name="capital" value="New_Delhi">
+        <label for="New_Delhi">New Delhi</label> 
+        <input type="radio" id="Kolkata" name="capital" value="Kolkata">
+        <label for="Kolkata">Kolkata</label>
+        <br><br>
+        <label >1. What is the National Animal of India?</label><br>
+        <input type="radio" id="Lion" name="animal" value="Lion">
+        <label for="Lion">Lion</label>
+        <input type="radio" id="Tiger" name="animal" value="Tiger">
+        <label for="Tiger">Tiger</label> 
+        <input type="radio" id="Elephant" name="animal" value="Elephant">
+        <label for="Elephant">Elephant</label>
+        <br><br>
+        <input type="submit" value="Submit" /> <br><br>  
+    </form>  
+
+    <div id="time"></div>
+
+    <script>
+        var time = document.getElementById("time");
+        var sec = 10;
+        function timer() {
+            sec -= 1;
+            if(sec == 0) {
+                sec = 10;
+                window.location.href="next.html";
+            }
+            var val = "Time:" + sec;
+            time.innerHTML = val;
+            // return val;
+        }        
+        setInterval(timer, 1000);
+    </script>
+</body>
+</html>
+
+<!-- <input type="radio" value="cheenn" name="q1"> cheenn -->
